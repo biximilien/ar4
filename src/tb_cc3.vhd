@@ -120,7 +120,7 @@ architecture behav of tb_cc3 is
 
         wait for 100 ns;
 
-        assert (y = '1') report "Test failed. Expected output to be '0'." severity failure;
+        assert (y = '1') report "Test failed. Expected output to be '1'." severity failure;
 
         a <= '1';
         b <= '0';
@@ -129,7 +129,7 @@ architecture behav of tb_cc3 is
 
         wait for 100 ns;
 
-        assert (y = '1') report "Test failed. Expected output to be '0'." severity failure;
+        assert (y = '1') report "Test failed. Expected output to be '1'." severity failure;
 
         a <= '1';
         b <= '0';
@@ -138,7 +138,7 @@ architecture behav of tb_cc3 is
 
         wait for 100 ns;
 
-        assert (y = '1') report "Test failed. Expected output to be '0'." severity failure;
+        assert (y = '1') report "Test failed. Expected output to be '1'." severity failure;
 
         a <= '1';
         b <= '0';
@@ -147,7 +147,7 @@ architecture behav of tb_cc3 is
 
         wait for 100 ns;
 
-        assert (y = '1') report "Test failed. Expected output to be '0'." severity failure;
+        assert (y = '1') report "Test failed. Expected output to be '1'." severity failure;
 
         a <= '1';
         b <= '0';
@@ -156,7 +156,7 @@ architecture behav of tb_cc3 is
 
         wait for 100 ns;
 
-        assert (y = '1') report "Test failed. Expected output to be '0'." severity failure;
+        assert (y = '1') report "Test failed. Expected output to be '1'." severity failure;
 
         a <= '1';
         b <= '1';
@@ -165,7 +165,7 @@ architecture behav of tb_cc3 is
 
         wait for 100 ns;
 
-        assert (y = '1') report "Test failed. Expected output to be '0'." severity failure;
+        assert (y = '1') report "Test failed. Expected output to be '1'." severity failure;
 
         a <= '1';
         b <= '1';
@@ -174,7 +174,7 @@ architecture behav of tb_cc3 is
 
         wait for 100 ns;
 
-        assert (y = '1') report "Test failed. Expected output to be '0'." severity failure;
+        assert (y = '1') report "Test failed. Expected output to be '1'." severity failure;
 
         a <= '1';
         b <= '1';
@@ -183,7 +183,7 @@ architecture behav of tb_cc3 is
 
         wait for 100 ns;
 
-        assert (y = '1') report "Test failed. Expected output to be '0'." severity failure;
+        assert (y = '1') report "Test failed. Expected output to be '1'." severity failure;
 
         a <= '1';
         b <= '1';

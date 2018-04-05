@@ -45,11 +45,15 @@ architecture behav of tb_cc2 is
 
         wait for 100 ns;
 
+        assert (y = '0') report "Test failed. Expected output to be '0'." severity failure;
+
         a <= '0';
         b <= '0';
         c <= '0';
 
         wait for 100 ns;
+
+        assert (y = '0') report "Test failed. Expected output to be '0'." severity failure;
 
         a <= '0';
         b <= '0';
@@ -57,17 +61,23 @@ architecture behav of tb_cc2 is
 
         wait for 100 ns;
 
+        assert (y = '0') report "Test failed. Expected output to be '0'." severity failure;
+
         a <= '0';
         b <= '1';
         c <= '0';
 
         wait for 100 ns;
 
+        assert (y = '0') report "Test failed. Expected output to be '0'." severity failure;
+
         a <= '0';
         b <= '1';
         c <= '1';
 
         wait for 100 ns;
+
+        assert (y = '1') report "Test failed. Expected output to be '1'." severity failure;
 
         a <= '1';
         b <= '0';
@@ -75,11 +85,15 @@ architecture behav of tb_cc2 is
 
         wait for 100 ns;
 
+        assert (y = '1') report "Test failed. Expected output to be '1'." severity failure;
+
         a <= '1';
         b <= '0';
         c <= '1';
 
         wait for 100 ns;
+
+        assert (y = '1') report "Test failed. Expected output to be '1'." severity failure;
 
         a <= '1';
         b <= '1';
@@ -87,9 +101,15 @@ architecture behav of tb_cc2 is
 
         wait for 100 ns;
 
+        assert (y = '1') report "Test failed. Expected output to be '1'." severity failure;
+
         a <= '1';
         b <= '1';
         c <= '1';
+
+        wait for 100 ns;
+
+        assert (y = '0') report "Test failed. Expected output to be '0'." severity failure;
 
         wait;
 
