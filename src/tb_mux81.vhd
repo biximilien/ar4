@@ -48,43 +48,63 @@ architecture behav of tb_mux81 is
      -- hold reset state for 100 ns.
      wait for 100 ns;
 
+     assert (o = '0') report "Test failed. Expected output to be '0' for initial state." severity failure;
+
      ins <= "00000001";
      sel <= "000";
 
      wait for 100 ns;
+
+     assert (o = '1') report "Test failed. Expected output to be '1' for select='000'" severity failure;
 
      ins <= "00000010";
      sel <= "001";
 
      wait for 100 ns;
 
+     assert (o = '1') report "Test failed. Expected output to be '1' for select='001'" severity failure;
+
      ins <= "00000100";
      sel <= "010";
 
      wait for 100 ns;
+
+     assert (o = '1') report "Test failed. Expected output to be '1' for select='010'" severity failure;
 
      ins <= "00001000";
      sel <= "011";
 
      wait for 100 ns;
 
+     assert (o = '1') report "Test failed. Expected output to be '1' for select='011'" severity failure;
+
      ins <= "00010000";
      sel <= "100";
 
      wait for 100 ns;
+
+     assert (o = '1') report "Test failed. Expected output to be '1' for select='100'" severity failure;
 
      ins <= "00100000";
      sel <= "101";
 
      wait for 100 ns;
 
+     assert (o = '1') report "Test failed. Expected output to be '1' for select='101'" severity failure;
+
      ins <= "01000000";
      sel <= "110";
 
      wait for 100 ns;
 
+     assert (o = '1') report "Test failed. Expected output to be '1' for select='110'" severity failure;
+
      ins <= "10000000";
      sel <= "111";
+
+     wait for 100 ns;
+
+     assert (o = '1') report "Test failed. Expected output to be '1' for select='111'" severity failure;
 
      wait;
 

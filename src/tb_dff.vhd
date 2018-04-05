@@ -46,68 +46,98 @@ architecture behav of tb_dff is
         -- hold reset state for 100 ns.
         wait for 100 ns;
 
-        x <= '0';
-        ck <= '0';
-
-        wait for 100 ns;
-
-        x <= '0';
-        ck <= '1';
-
-        wait for 100 ns;
+        assert (y = 'U') report "Test failed. Expected output to be 'U'." severity failure;
 
         x <= '0';
         ck <= '0';
 
         wait for 100 ns;
 
+        assert (y = 'U') report "Test failed. Expected output to be 'U'." severity failure;
+
         x <= '0';
         ck <= '1';
 
         wait for 100 ns;
+
+        assert (y = '0') report "Test failed. Expected output to be '0'." severity failure;
+
+        x <= '0';
+        ck <= '0';
+
+        wait for 100 ns;
+
+        assert (y = '0') report "Test failed. Expected output to be '0'." severity failure;
+
+        x <= '0';
+        ck <= '1';
+
+        wait for 100 ns;
+
+        assert (y = '0') report "Test failed. Expected output to be '0'." severity failure;
 
         x <= '1';
         ck <= '0';
 
         wait for 100 ns;
 
-        x <= '1';
-        ck <= '1';
-
-        wait for 100 ns;
-
-        x <= '1';
-        ck <= '0';
-
-        wait for 100 ns;
+        assert (y = '0') report "Test failed. Expected output to be '0'." severity failure;
 
         x <= '1';
         ck <= '1';
 
         wait for 100 ns;
 
+        assert (y = '1') report "Test failed. Expected output to be '1'." severity failure;
+
+        x <= '1';
+        ck <= '0';
+
+        wait for 100 ns;
+
+        assert (y = '1') report "Test failed. Expected output to be '1'." severity failure;
+
+        x <= '1';
+        ck <= '1';
+
+        wait for 100 ns;
+
+        assert (y = '1') report "Test failed. Expected output to be '1'." severity failure;
+
         x <= '0';
         ck <= '0';
 
         wait for 100 ns;
+
+        assert (y = '1') report "Test failed. Expected output to be '1'." severity failure;
 
         x <= '0';
         ck <= '1';
 
         wait for 100 ns;
 
+        assert (y = '0') report "Test failed. Expected output to be '0'." severity failure;
+
         x <= '0';
         ck <= '0';
 
         wait for 100 ns;
+
+        assert (y = '0') report "Test failed. Expected output to be '0'." severity failure;
 
         x <= '0';
         ck <= '1';
 
         wait for 100 ns;
 
+        assert (y = '0') report "Test failed. Expected output to be '0'." severity failure;
+
         x <= '0';
         ck <= '0';
+
+        wait for 100 ns;
+
+        assert (y = '0') report "Test failed. Expected output to be '0'." severity failure;
 
         wait;
 
