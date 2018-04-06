@@ -1,11 +1,14 @@
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
--- Cadre       : GEN1333 - Conception des circuits integrés                  --
---             : Projet de conception d'un registre d'adressage              --
--- Par         : Maxime Gauthier, Jérémie St-Pierre Robitaille, Bobby        --
+-- Cadre       : GEN1333 - Conception de circuits integrés                   --
+--             : Projet de conception d'un registre d'adresse mémoire        --
+-- Par         : Maxime Gauthier                                             --
+--               Jérémie St-Pierre Robitaille                                --
+--               Philippe Tanguay                                            --
 -- Date        : 04 / 18 / 2018                                              --
--- Fichier     : mux81.vhd                                                   --
--- Description : MUX81                                                       --
+-- Fichier     : cc3.vhd                                                     --
+-- Description : VHDL pour le circuit combinatoire de la fonction            --
+--               incrémentation du bit le plus significatif.                 --
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 
