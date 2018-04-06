@@ -4,7 +4,7 @@
 --             : Projet de conception d'un registre d'adressage              --
 -- Par         : Maxime Gauthier, Jérémie St-Pierre Robitaille, Bobby        --
 -- Date        : 04 / 18 / 2018                                              --
--- Fichier     : ar8.vhd                                                     --
+-- Fichier     : ar4.vhd                                                     --
 -- Description : VHDL pour un registre d'adressage a 8 bits                  --
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
@@ -12,16 +12,16 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity ar8 is
+entity ar4 is
   port (
     Ia, Ib, Ic, Id  : in  std_logic;
     LD, INC, CLR    : in  std_logic;
     CLK             : in  std_logic;
     OA, OB, OC, OD  : out std_logic
   );
-end ar8;
+end ar4;
 
-architecture behav of ar8 is
+architecture behav of ar4 is
 
   component mux81
     port(
@@ -70,6 +70,8 @@ architecture behav of ar8 is
 
   signal CC3toM3 : std_logic := '0';
   signal CC2toM2 : std_logic := '0';
+  signal CC1toM1 : std_logic := '0';
+  signal CC0toM0 : std_logic := '0';
 
   signal zero   : std_logic := '0';
 
@@ -111,7 +113,7 @@ architecture behav of ar8 is
       s(0) => LD,
       i(0) => s1,
       i(1) => Ic,
-      i(2) => zero,
+      i(2) => CC1toM1,
       i(3) => zero,
       i(4) => zero,
       i(5) => zero,
@@ -126,7 +128,7 @@ architecture behav of ar8 is
       s(0) => LD,
       i(0) => s0,
       i(1) => Id,
-      i(2) => zero,
+      i(2) => CC0toM0,
       i(3) => zero,
       i(4) => zero,
       i(5) => zero,
@@ -174,9 +176,19 @@ architecture behav of ar8 is
       z  => CC2toM2
     );
 
-    process(clk) is
-      begin
+    CC1toM1 <= not(s1) xor not(s0);
+    CC0toM0 <= not(s0);
 
-    end process;
+    OA <= s3;
+    OB <= s2;
+    OC <= s1;
+    OD <= s0;
+
+    -- process(clk) is
+    --   begin
+    --
+    --
+    --
+    -- end process;
 
 end behav;
